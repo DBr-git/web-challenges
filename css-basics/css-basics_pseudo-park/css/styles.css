@@ -22,12 +22,21 @@
 
 .animal {
   padding: 16px;
+  font-size: 32px;
 
   /*
     The animals are very small.
     The size of the emojis is controlled via the font size.
     Set the font size to 32px.
   */
+}
+
+.animal.giraffe {
+  text-align: center;
+}
+
+.animal.dino {
+  text-align: right;
 }
 
 /*
@@ -37,6 +46,18 @@
 
   💡 Select the animals by their class names and use the text-align property.
 */
+
+.animal.giraffe:hover {
+  background-color: lightgreen;
+}
+
+.animal.dino:hover {
+  background-color: lightsalmon;
+}
+
+.animal.crocodile:hover {
+  background-color: lightblue;
+}
 
 /* 
   The animals want some color! 🎨
