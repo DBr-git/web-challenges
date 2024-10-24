@@ -79,6 +79,10 @@ section {
 
 .subtitle {
   /* Your solution */
+  border-left: 3px solid gold;
+  border-right: 3px solid gold;
+  padding: 12px;
+  display: inline-block;
 }
 
 /* ------- List ------- */
