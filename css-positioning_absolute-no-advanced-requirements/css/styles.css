@@ -45,7 +45,7 @@ main {
   position: absolute;
   top: 0;
   left: 42%;
-  /*use lef:50% and transform: translateX(-50%); for more precise placement*/
+  /*use left:50% and transform: translateX(-50%); for more precise placement*/
 }
 
 .box--top-right {
