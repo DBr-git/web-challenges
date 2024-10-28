@@ -244,9 +244,25 @@ fairly essential to completing this challenge. */
 CSS when certain conditions that we declare are met - such as a certain viewport
 width, etc. */
 
-/* Media Query Tablet */
+/* Media Query Mobile */
 /* --- */
 /* Replace this comment with your media query. */
+/* --- */
+
+/* Media Query Tablet */
+/* --- */
+@media (min-width: 600px) and (max-width: 1199px) {
+  .product-card {
+    width: 100%;
+  }
+  .card-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 10px;
+  }
+}
 /* --- */
 
 /* Media Query Desktop */
