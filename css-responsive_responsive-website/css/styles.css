@@ -267,5 +267,36 @@ width, etc. */
 
 /* Media Query Desktop */
 /* --- */
-/* Replace this comment with your media query. */
+@media (min-width: 1200px) {
+  .card-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 250px;
+    padding: 10px;
+    align-items: start;
+  }
+  .product-card {
+    width: 100%;
+  }
+  .--forest {
+    grid-column: 1 / span 4;
+    grid-row: 1 / 3;
+    height: 100%;
+  }
+  .intro-text {
+    grid-column: 1 / 3;
+  }
+  .--mountain {
+    grid-column: 3 / 5;
+  }
+  .--river {
+    grid-column: 1 / 3;
+  }
+  .--ocean {
+    grid-column: 3 / 5;
+  }
+  .--desert {
+    grid-column: 2 / 4;
+  }
+}
 /* --- */
