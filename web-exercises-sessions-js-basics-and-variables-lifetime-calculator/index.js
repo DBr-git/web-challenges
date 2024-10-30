@@ -16,4 +16,16 @@ Make sure to log every number with a nice descriptive text. Hint: you can combin
 
 const currentAge = Number(process.argv[2]); // this gives you the <age> the user entered in the command "nodex index.js <age>"
 
-console.log("Your current age is: " + currentAge);
+console.log("Your current age is:", currentAge);
+
+let daysLived = currentAge * 365.25;
+console.log("Days Lived:", daysLived);
+
+let expectedRemainder = (80 - currentAge) * 365.25;
+console.log("Days Remaining:", expectedRemainder);
+
+let livedAlready = (daysLived / (80 * 365.25)) * 100;
+console.log("Already Lived:", livedAlready, "%");
+
+let daysSlept = (daysLived * 8) / 24;
+console.log("Days Sleeping:", daysSlept);
