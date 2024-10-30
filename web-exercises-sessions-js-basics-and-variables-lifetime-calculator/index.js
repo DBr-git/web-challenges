@@ -18,14 +18,17 @@ const currentAge = Number(process.argv[2]); // this gives you the <age> the user
 
 console.log("Your current age is:", currentAge);
 
-let daysLived = currentAge * 365.25;
+const avgDays = 365.25;
+const lifeExpactancy = 80;
+
+const daysLived = currentAge * avgDays;
 console.log("Days Lived:", daysLived);
 
-let expectedRemainder = (80 - currentAge) * 365.25;
+const expectedRemainder = (lifeExpactancy - currentAge) * avgDays;
 console.log("Days Remaining:", expectedRemainder);
 
-let livedAlready = (daysLived / (80 * 365.25)) * 100;
+const livedAlready = (daysLived / (lifeExpactancy * avgDays)) * 100;
 console.log("Already Lived:", livedAlready, "%");
 
-let daysSlept = (daysLived * 8) / 24;
+const daysSlept = (daysLived * 8) / 24;
 console.log("Days Sleeping:", daysSlept);
