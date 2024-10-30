@@ -7,15 +7,15 @@ const buttonToggle = document.querySelector('[data-js="toggle-button"]');
 
 //Implements Dark Mode
 buttonDarkMode.addEventListener("click", () => {
-  bodyElement.classList.add("body-dark");
+  bodyElement.classList.add("dark");
 });
 
 //Implements Light Mode
 buttonLightMode.addEventListener("click", () => {
-  bodyElement.classList.remove("body-dark");
+  bodyElement.classList.remove("dark");
 });
 
 //Implements Color Theme Toggle
 buttonToggle.addEventListener("click", () => {
-  bodyElement.classList.toggle("body-dark");
+  bodyElement.classList.toggle("dark");
 });
