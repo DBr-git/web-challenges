@@ -19,13 +19,13 @@ const numberOfHotdogs = 99;
 let price;
 
 if (numberOfHotdogs >= 1000000) {
-  price = 0.1;
+  price = 0.1 * numberOfHotdogs;
 } else if (numberOfHotdogs <= 999999 && numberOfHotdogs >= 100) {
-  price = 1;
+  price = 1 * numberOfHotdogs;
 } else if (numberOfHotdogs <= 99 && numberOfHotdogs >= 5) {
-  price = 1.5;
+  price = 1.5 * numberOfHotdogs;
 } else if (numberOfHotdogs <= 4) {
-  price = 2;
+  price = 2 * numberOfHotdogs;
 }
 console.log("Hotdog Price: " + price);
 
