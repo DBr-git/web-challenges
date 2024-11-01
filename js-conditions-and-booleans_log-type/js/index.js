@@ -26,4 +26,6 @@ switch (typeof data) {
       console.log("array!");
     } else console.log("object!");
     break;
+  default:
+    console.log("Couldn't find type of data!");
 }
