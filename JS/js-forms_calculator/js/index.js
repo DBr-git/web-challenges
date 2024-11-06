@@ -43,6 +43,7 @@ form.addEventListener("submit", (event) => {
  */
 
   //Solution with Switch Statement
+  /* 
   switch (operation) {
     case "addition":
       result = add(numberA, numberB);
@@ -56,6 +57,18 @@ form.addEventListener("submit", (event) => {
     default:
       result = divide(numberA, numberB);
   }
+ */
+
+  //Solution with Lookup Object
+
+  const operations = {
+    addition: add,
+    subtraction: subtract,
+    multiplication: multiply,
+    division: divide,
+  };
+  result = operations[operation](numberA, numberB);
+
   // --^-- write your code here --^--
 
   resultOutput.textContent = result;
