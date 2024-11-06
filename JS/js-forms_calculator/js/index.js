@@ -29,6 +29,8 @@ form.addEventListener("submit", (event) => {
   const numberB = Number(event.target.elements.numberB.value);
   const operation = event.target.elements.operator.value;
 
+  //Solution with if Statement
+  /* 
   if (operation === "addition") {
     result = add(numberA, numberB);
   } else if (operation === "subtraction") {
@@ -37,6 +39,22 @@ form.addEventListener("submit", (event) => {
     result = multiply(numberA, numberB);
   } else {
     result = divide(numberA, numberB);
+  }
+ */
+
+  //Solution with Switch Statement
+  switch (operation) {
+    case "addition":
+      result = add(numberA, numberB);
+      break;
+    case "subtraction":
+      result = subtract(numberA, numberB);
+      break;
+    case "multiplication":
+      result = multiply(numberA, numberB);
+      break;
+    default:
+      result = divide(numberA, numberB);
   }
   // --^-- write your code here --^--
 
