@@ -7,7 +7,14 @@ const errorElement = document.querySelector("[data-js='error']");
 async function fetchUserData(url) {
   try {
     const response = await fetch(url);
-
+    const contentType = response.headers.get("content-type");
+    console.log(contentType);
+    if (!response.ok) {
+      throw new Error(`Error ${response.status}: User not found!`);
+    }
+    if (!contentType.includes("application/json")) {
+      throw new Error(`Error: Unexpected content type: ${contentType}`);
+    }
     return await response.json();
   } catch (error) {
     return { error: error.message };
@@ -30,6 +37,7 @@ endpoints.forEach((endpoint) => {
     const result = await fetchUserData(endpoint.url);
 
     if (result.error) {
+      console.error(result.error);
       errorElement.textContent = result.error;
       userElement.innerHTML = "No user data available.";
     } else {
