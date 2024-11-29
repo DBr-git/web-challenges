@@ -1,21 +1,23 @@
-import Image from "next/image";
 import Link from "next/link";
-import { volumes } from "../../lib/data.js";
+import { introduction } from "../../lib/data";
+import { useRouter } from "next/router";
+import { volumes } from "../../lib/data";
+import Image from "next/image";
 
-export default function VolumeDetail() {
-  const volumeIndex = volumes.findIndex(
-    ({ slug }) => slug === "the-fellowship-of-the-ring"
-  );
+export default function Volumes() {
+  const router = useRouter();
+  const slug = router.query.slug;
 
-  const volume = volumes[volumeIndex];
-  const nextVolume = volumes[volumeIndex + 1];
-  const previousVolume = volumes[volumeIndex - 1];
+  const currentVolume = volumes.find((movie) => movie.slug === slug);
 
-  if (!volume) {
+  if (!currentVolume) {
     return null;
   }
 
-  const { title, description, cover, books } = volume;
+  const { title, description, cover, books } = currentVolume;
+  const currentIndex = volumes.findIndex((movie) => movie.slug === slug);
+  const previousVolume = volumes[currentIndex - 1] || null;
+  const nextVolume = volumes[currentIndex + 1] || null;
 
   return (
     <>
