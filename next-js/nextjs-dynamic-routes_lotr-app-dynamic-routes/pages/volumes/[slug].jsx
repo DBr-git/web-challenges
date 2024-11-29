@@ -8,7 +8,7 @@ export default function Volumes() {
   const router = useRouter();
   const slug = router.query.slug;
 
-  const currentVolume = volumes.find((movie) => movie.slug === slug);
+  const currentVolume = volumes.find((volume) => volume.slug === slug);
 
   if (!currentVolume) {
     return null;
