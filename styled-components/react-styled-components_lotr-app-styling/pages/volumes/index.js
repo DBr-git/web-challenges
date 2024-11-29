@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { introduction, volumes } from "../../lib/data";
+import styled from "styled-components";
 
 export default function Volumes() {
   return (
     <>
-      <h1>The Lord of the Rings</h1>
+      <StyledHeadline>The Lord of the Rings</StyledHeadline>
       <p>{introduction}</p>
       <ul>
         {volumes.map((volume) => (
@@ -16,3 +17,10 @@ export default function Volumes() {
     </>
   );
 }
+
+const StyledHeadline = styled.h1`
+  font-size: var(--headline1-size);
+  font-family: var(--font-family);
+  /* font-weight: var(--headline1-weight); */
+  line-height: var(--headline1-line-height);
+`;
