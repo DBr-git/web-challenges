@@ -15,7 +15,7 @@ export default function Volumes() {
   }
 
   const { title, description, cover, books } = currentVolume;
-  const currentIndex = volumes.findIndex((movie) => movie.slug === slug);
+  const currentIndex = volumes.findIndex((volume) => volume.slug === slug);
   const previousVolume = volumes[currentIndex - 1] || null;
   const nextVolume = volumes[currentIndex + 1] || null;
 
