@@ -24,6 +24,19 @@ export default function Product() {
       <p>
         Price: {data.price} {data.currency}
       </p>
+      {data.reviews ? (
+        <ul>
+          {data.reviews.map((review) => {
+            return (
+              <li key={review._id}>
+                <p>Title: {review.title}</p>
+                <p>Comment: {review.text}</p>
+                <p>Rating: {review.rating}</p>
+              </li>
+            );
+          })}{" "}
+        </ul>
+      ) : null}
       <StyledLink href="/">Back to all</StyledLink>
     </ProductCard>
   );
