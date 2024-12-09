@@ -12,9 +12,9 @@ export default function Details() {
     data: product,
     error,
     isLoading,
-  } = useSWR(`/api/products/${id}`, fetcher);
+  } = useSWR(router.isReady ? `/api/products/${id}` : null, fetcher);
 
-  if (error) return <div>failed to load</div>;
+  if (!product || error) return <div>failed to load</div>;
   if (isLoading) return <div>loading...</div>;
 
   return (
